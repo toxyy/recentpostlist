@@ -1,0 +1,7 @@
+recentpostlist_controller:
+    pattern: /recentpostlist/{route}
+    defaults: { _controller: toxyy.recentpostlist.main:handle }
+
+recentpostlist_index:
+    pattern: /recentpostlist/
+    defaults: { _controller: toxyy.recentpostlist.main:handle }

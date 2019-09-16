@@ -1,0 +1,27 @@
+services:
+    toxyy.recentpostlist.listener:
+        class: toxyy\recentpostlist\event\listener
+        arguments:
+            - '@config'
+            - '@template'
+            - '@service_container'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+        tags:
+            - { name: event.listener }
+
+    toxyy.recentpostlist.main:
+        class: toxyy\recentpostlist\controller\main
+        arguments:
+            - '@cache'
+            - '@dbal.conn'
+            - '@auth'
+            - '@config'
+
+    toxyy.recentpostlist.admin_listener:
+        class: toxyy\recentpostlist\event\admin_listener
+        arguments:
+            - '@config'
+            - '@request'
+        tags:
+            - { name: event.listener }

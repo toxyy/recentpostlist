@@ -1,0 +1,30 @@
+{
+	"name": "toxyy/recentpostlist",
+	"type": "phpbb-extension",
+	"description": "Recent post list on the index",
+	"version": "1.0.0",
+	"time": "2019-09-16",
+	"keywords": ["phpbb", "extension", "recent posts"],
+	"license": "Proprietary/All rights reserved",
+	"authors": [{
+		"name": "toxyy",
+		"email": "thrashtek@yahoo.com",
+		"homepage": "https://github.com/toxyy/",
+		"role": "Developer"
+	}],
+	"require": {
+		"php": ">=7"
+	},
+	"extra": {
+		"display-name": "Recent Post List",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.2"
+		},
+		"version-check": {
+			"host": "toxyy.github.io",
+			"directory": "/version",
+			"filename": "recentposts.json",
+			"ssl": 1
+		}
+	}
+}
